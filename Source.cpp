@@ -19,6 +19,7 @@ GRAMMAR OF THE PROGRAM
 	term:
 		term / primary
 		term * primary
+		term % primary
 		primary
 
 	primary:
@@ -34,8 +35,8 @@ GRAMMAR OF THE PROGRAM
 #include <iostream>
 
 enum Token_value {
-	NAME,			NUMBER,			END,
-	PLUS = '+',		MINUS = '-',	MUL = '*',	DIV = '/',
+	NAME,			NUMBER,			END,		PLUS = '+',
+	MINUS = '-',	MUL = '*',		DIV = '/',	MOD = '%',
 	PRINT = ';',	ASSIGN = '=',	LP = '(',	RP = ')'
 };
 
@@ -88,6 +89,9 @@ double term(bool get)	// multiply and divide
 				break;
 			}
 			return error("divide by 0");
+		case MOD:
+			left = static_cast<int> (left) % static_cast<int> (term(true));
+			break;
 		default:
 			return left;
 		}
@@ -144,6 +148,7 @@ Token_value get_token()
 		return curr_tok = PRINT;
 	case '*':
 	case '/':
+	case '%':
 	case '+':
 	case '-':
 	case '(':
@@ -173,6 +178,7 @@ int main()
 {
 	table["pi"] = 3.1415926535897935385;	// insert predefined names
 	table["e"] = 2.7182818284590452354;
+	table["phi"] = 1.6180339887498948482;
 
 	while (std::cin) {
 		get_token();
