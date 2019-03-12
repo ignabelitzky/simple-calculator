@@ -1,7 +1,7 @@
 /*
 Source code from the book "The C++ Programming Language" by Bjarne Stroustrup
 
-GRAMMAR OF THE PROGRAM
+THE GRAMMAR OF THE PROGRAM
 
 	program:
 		END							// END is end-of-input
