@@ -7,13 +7,16 @@ This is a simple calculator that can perform the following operations:
   - Multiplication (*)
   
 ## Getting Started
-These instruction will get you a copy of the project up and running on your local machine for development and testing purposes.
+Just download Source.cpp file.
 
 ### Prerequisites
-You only need a C++ Compiler
+You only need a C++ Compiler.
 
 ### Running Source.cpp file
-Just compile the C++ file
+Just compile the C++ file and do some inputs like:
+  - 1 + 5 + 8
+  - r = 5.8
+  - area = pi * r * r
   
 ## Source
 The C++ Programming Language - 3rd Edition by Bjarne Stroustrup
