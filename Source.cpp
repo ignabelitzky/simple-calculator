@@ -1,4 +1,6 @@
 /*
+Source code from the book "The C++ Programming Language" by Bjarne Stroustrup
+
 GRAMMAR OF THE PROGRAM
 
 	program:
