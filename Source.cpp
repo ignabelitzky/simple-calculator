@@ -1,7 +1,7 @@
 /*
 Source code from the book "The C++ Programming Language" by Bjarne Stroustrup
 
-THE GRAMMAR OF THE PROGRAM
+GRAMMAR OF THE CALCULATOR
 
 	program:
 		END							// END is end-of-input
@@ -35,16 +35,16 @@ THE GRAMMAR OF THE PROGRAM
 #include <iostream>
 
 enum Token_value {
-	NAME,			NUMBER,			END,		PLUS = '+',
-	MINUS = '-',	MUL = '*',		DIV = '/',	MOD = '%',
-	PRINT = ';',	ASSIGN = '=',	LP = '(',	RP = ')'
+	NAME,			NUMBER,			END,			PLUS = '+',
+	MINUS = '-',	MUL = '*',		DIV = '/',		MOD = '%',
+	PRINT = ';',	ASSIGN = '=',	LP = '(',		RP = ')'
 };
 
-Token_value curr_tok = PRINT;
-double number_value;
-std::string string_value;
-std::map<std::string, double> table;
-int no_of_errors;
+Token_value curr_tok{ PRINT };
+double number_value{};
+std::string string_value{};
+std::map<std::string, double> table{};
+int no_of_errors{};
 
 double term(bool);
 double prim(bool);
@@ -133,7 +133,7 @@ double prim(bool get)	// handle primaries
 
 Token_value get_token()
 {
-	char ch = 0;
+	char ch{};
 	
 	do {	// skip whitespace except '\n'
 		if (!std::cin.get(ch))
