@@ -7,7 +7,7 @@ Simple calculator that can perform the following operations:
 * Module (%)
   
 ## Getting Started
-This simple calculater could be open with any C++ compiler. I create this software using Visual Studio Community 2019.
+This simple calculator could be open with any C++ compiler. I create this software using Visual Studio Community 2019.
 
 ### Prerequisites
 You only need a C++ Compiler.
